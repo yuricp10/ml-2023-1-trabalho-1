@@ -59,8 +59,6 @@ dados = dados.loc[:, dados.isnull().mean() < 0.9]
 
 print("O dataset possui {} linhas e {} colunas".format(dados.shape[0], dados.shape[1]))
 
-#filtrando mais um pouco removendo aqueles que possuem muitos outros dados faltando
-dados.dropna(axis=1,thresh=55, inplace=True)
 
 print(dados.isnull().sum())
 
